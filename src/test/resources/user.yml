@@ -1,0 +1,15 @@
+gender: Mr
+name: UserName
+email: username@mail.com
+password: password
+dateBirth: 01-10-1990
+firstName: FirstNameUser
+lastName: LastNameUser
+company: BigCompany
+address: addressUser
+addressSecond: addressSecondUser
+country: Australia
+state: StateUser
+city: CityUser
+zipCode: 400700
+mobileNumber: 0123456789

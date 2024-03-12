@@ -1,0 +1,43 @@
+<configuration>
+    <property name="DIR" value="./src/Logger"/>
+    <!--    для логов Selenide-->
+    <appender name="fileSLD" class="ch.qos.logback.core.FileAppender">
+        <file>${DIR}/selenide.log</file>
+        <append>true</append>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <!--    для логов API-->
+    <appender name="fileAPI" class="ch.qos.logback.core.FileAppender">
+        <file>${DIR}/api.log</file>
+        <append>true</append>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <!--Консольный аппендер -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <logger name="fileSLD" level="INFO">
+        <appender-ref ref="fileSLD"/>
+    </logger>
+
+
+    <logger name="fileAPI" level="INFO">
+        <appender-ref ref="fileAPI"/>
+    </logger>
+
+    <root>
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+
+</configuration>
+
